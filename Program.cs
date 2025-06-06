@@ -5,17 +5,17 @@ using Prometheus;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Добавляем поддержку метрик
+
 builder.Services.AddMetrics();
 
 var app = builder.Build();
 
-// Пример пользовательской метрики
+
 var counter = Metrics.CreateCounter("my_requests_total", "Number of requests.");
 
 app.UseRouting();
 
-// Middleware для увеличения счётчика
+
 app.Use(async (context, next) =>
 {
     if (context.Request.Path != "/metrics")
@@ -25,8 +25,8 @@ app.Use(async (context, next) =>
     await next();
 });
 
-// Регистрируем эндпоинт /metrics и главную страницу без UseEndpoints
-app.MapMetrics(); // <-- этот метод добавляет эндпоинт /metrics
+
+app.MapMetrics(); 
 app.MapGet("/", () => "Тест ПСБ!");
 
 app.Run();
