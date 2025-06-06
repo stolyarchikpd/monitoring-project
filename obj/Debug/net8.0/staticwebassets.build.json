@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "uyR3I4rcVvRnUA09eAk0ipPYaFHWLFafEqY9xzzgl4E=",
+  "Source": "MonitoringApp",
+  "BasePath": "_content/MonitoringApp",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
